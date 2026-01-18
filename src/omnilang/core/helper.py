@@ -124,7 +124,10 @@ class TranslationHelper:
         self.translation_endpoints = []
         
         # DeepL API configuration
-        self.deepl_api_key = "***REMOVED***"
+        self.deepl_api_key = os.environ.get('DEEPL_API_KEY', '')
+        if not self.deepl_api_key:
+            logger.warning("DEEPL_API_KEY environment variable not set. DeepL translations will not be available.")
+
         
         # Corrected class instantiation
         self.google_translator = GoogleTranslator()
