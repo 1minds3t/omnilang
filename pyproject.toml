@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omnilang"
+version = "0.1.0"
+description = "The OmniPkg i18n Management Super-Tool"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+    {name = "minds3t", email = "1minds3t@proton.me"}
+]
+dependencies = [
+    "polib",
+    "googletrans==4.0.0rc1",
+    "langdetect",
+    "httpx",
+    "requests",
+    "rich",
+]
+
+[project.scripts]
+8lang = "omnilang.cli:main"
+omnilang = "omnilang.cli:main"
+8LANG = "omnilang.cli:main"
+OMNILANG = "omnilang.cli:main"
+
+[tool.setuptools]
+packages = ["omnilang", "omnilang.core"]
+
+[tool.setuptools.package-dir]
+"" = "src"
