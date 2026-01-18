@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = {file = "LICENSE"}
 authors = [
-    {name = "minds3t", email = "1minds3t@proton.me"}
+    {name = "1minds3t", email = "1minds3t@proton.me"}
 ]
 dependencies = [
     "polib",
